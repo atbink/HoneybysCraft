@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cocoa: #4A2F27;
+    --color-warmbrown: #765548;
+    --color-honey: #C98B4B;
+    --color-cream: #F7F0E6;
+    --color-beige: #E8D8C5;
+    --color-offwhite: #FCFAF7;
+    --color-espresso: #2A211E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #FCFAF7;
+    color: #2A211E;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Fraunces', Georgia, serif;
+    font-feature-settings: "liga" 1, "swsh" 1;
+  }
+}
+
+/* Subtle tactile paper & linen grain overlay */
+.bg-paper-grain {
+  background-image: radial-gradient(rgba(74, 47, 39, 0.055) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-linen-weave {
+  background-color: #F7F0E6;
+  background-image: 
+    linear-gradient(90deg, rgba(118, 85, 72, 0.03) 50%, transparent 50%),
+    linear-gradient(rgba(118, 85, 72, 0.03) 50%, transparent 50%);
+  background-size: 6px 6px;
+}
+
+/* Hand-basted stitch borders */
+.stitch-border {
+  background-image: repeating-linear-gradient(
+    to right,
+    #765548 0,
+    #765548 8px,
+    transparent 8px,
+    transparent 15px
+  );
+  background-position: bottom;
+  background-size: 100% 1.5px;
+  background-repeat: no-repeat;
+}
+
+.stitch-box {
+  border: 1.5px dashed rgba(118, 85, 72, 0.38);
+}
+
+/* Subtle masking tape piece */
+.masking-tape {
+  background: rgba(232, 216, 197, 0.78);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 6px rgba(42, 33, 30, 0.08);
+  border-left: 2px dotted rgba(74, 47, 39, 0.18);
+  border-right: 2px dotted rgba(74, 47, 39, 0.18);
+}
+
+/* Editorial irregular crops (avoiding generic rounded-xl cards everywhere) */
+.clip-arch {
+  border-radius: 180px 180px 12px 12px;
+}
+
+.clip-atelier-left {
+  border-radius: 6px 48px 6px 36px;
+}
+
+.clip-atelier-right {
+  border-radius: 48px 6px 36px 6px;
+}
+
+.clip-stamp {
+  border-radius: 4px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F0E6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C98B4B;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A2F27;
+}
