@@ -1,26 +1,22 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowDown, Sparkles, Wand2, Heart } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowDown, Sparkles, Wand2 } from 'lucide-react';
 import { StudioBearMark } from './CraftIcons';
 
 export const Hero: React.FC = () => {
-  const { scrollY } = useScroll();
-  const yImage = useTransform(scrollY, [0, 500], [0, 28]);
-  const yPolaroid = useTransform(scrollY, [0, 500], [0, -16]);
-
   return (
     <section
       id="beranda"
-      className="relative pt-32 pb-20 lg:pt-38 lg:pb-28 overflow-hidden bg-cream-soft bg-paper-grain flex items-center"
+      className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-cream-soft bg-paper-grain flex items-center"
     >
-      {/* Ambient Warm Craft Studio Glows */}
+      {/* Ambient Warm Atmosphere */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-24 right-0 w-[38rem] h-[38rem] rounded-full bg-beige/65 blur-3xl opacity-75"
+        className="pointer-events-none absolute -top-24 right-0 w-[36rem] h-[36rem] rounded-full bg-beige/60 blur-3xl opacity-70"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 -left-16 w-[30rem] h-[30rem] rounded-full bg-honey/15 blur-3xl opacity-50"
+        className="pointer-events-none absolute bottom-0 -left-16 w-[28rem] h-[28rem] rounded-full bg-honey/15 blur-3xl opacity-50"
       />
 
       <div className="relative max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full">
@@ -108,72 +104,55 @@ export const Hero: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Right Column: Centered Plush Visual Inside Editorial Arch Frame */}
+          {/* Right Column: Clean & Modern Boutique Plush Showcase (No awkward arch cutoffs) */}
           <div className="lg:col-span-5 relative">
             <motion.div
-              style={{ y: yImage }}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.85, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ opacity: 0, scale: 0.94, y: 24 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="relative mx-auto max-w-md lg:max-w-none"
             >
-              {/* Masking Tape Decor */}
-              <div
-                aria-hidden="true"
-                className="masking-tape absolute -top-3.5 left-1/2 -translate-x-1/2 -rotate-1 z-20 w-32 h-6"
-              />
+              {/* Primary Showcase Card */}
+              <div className="relative rounded-3xl overflow-hidden bg-cream border border-cocoa/15 shadow-editorial aspect-[4/5]">
+                <img
+                  src="/images/Chibi Blue-Haired Plush in Cozy Craft Setting.png"
+                  alt="Boneka handmade plush karakter chibi Honey by S Craft di meja kerja studio"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-104"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent pointer-events-none" />
 
-              {/* Main Editorial Arch Image with Perfectly Centered Doll */}
-              <div className="relative bg-cream p-3 sm:p-4 pb-7 shadow-editorial border border-cocoa/10 clip-arch">
-                <div className="overflow-hidden clip-arch aspect-[4/5] bg-beige relative">
-                  <img
-                    src="/images/hero-plush-centered.png"
-                    alt="Boneka karakter custom buatan tangan Honeybys.craft dengan cardigan rajut di meja studio kayu"
-                    className="w-full h-full object-cover object-center transform hover:scale-104 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso/25 via-transparent to-transparent pointer-events-none" />
-                </div>
-
-                <div className="mt-3 px-1 flex items-center justify-between">
-                  <span className="font-hand text-lg sm:text-xl text-cocoa">
-                    No. Arsip 042 — “OC Baret Musim Gugur”
-                  </span>
-                  <span className="font-mono text-[9.5px] uppercase tracking-wider text-warmbrown">
-                    20CM MINKY + RAJUT
+                {/* Craftsmanship Note */}
+                <div className="absolute inset-x-5 bottom-5 flex items-center justify-between text-cream">
+                  <div>
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-honey-light">
+                      Milo the Royal Chibi
+                    </span>
+                    <p className="font-serif text-lg font-medium">Custom Character Plush</p>
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-cream-soft/90 text-espresso text-[10px] font-mono font-semibold uppercase tracking-wider shadow-sm">
+                    Hand-stitched
                   </span>
                 </div>
               </div>
 
-              {/* Overlapping Polaroid of Original Concept Sketch */}
+              {/* Floating Small Complementary Photo */}
               <motion.div
-                style={{ y: yPolaroid }}
-                initial={{ opacity: 0, x: -20, rotate: -5 }}
-                animate={{ opacity: 1, x: 0, rotate: -4 }}
+                initial={{ opacity: 0, y: 20, rotate: 4 }}
+                animate={{ opacity: 1, y: 0, rotate: 3 }}
                 transition={{ duration: 0.7, delay: 0.35 }}
-                className="hidden sm:block absolute -bottom-7 -left-7 z-20 w-44 bg-cream-soft p-2.5 shadow-editorial border border-cocoa/15"
+                className="hidden sm:block absolute -bottom-6 -left-7 w-44 bg-cream p-2.5 rounded-2xl border border-cocoa/20 shadow-editorial z-20"
               >
-                <div className="aspect-square overflow-hidden bg-beige">
+                <div className="aspect-[4/3] rounded-xl overflow-hidden bg-beige">
                   <img
-                    src="/images/sketch-before.png"
-                    alt="Sketsa referensi karakter original dari pemesan"
+                    src="/images/Fluffy Smiling Bunny Plush Held by Hand.png"
+                    alt="Kelinci fluffy handmade lembut"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="font-hand text-base text-cocoa text-center mt-1.5 leading-none">
-                  1. Sketsa konsep dari kamu
+                <p className="font-hand text-sm text-cocoa mt-1.5 text-center">
+                  Super soft & huggable 🤎
                 </p>
               </motion.div>
-
-              {/* Floating Studio Note Stamp */}
-              <div className="absolute -top-4 -right-2 sm:-right-4 z-20 bg-cocoa text-cream px-3.5 py-2.5 rounded-sm shadow-tactile border border-cream/15 max-w-[175px]">
-                <div className="flex items-center gap-1.5 text-honey-light font-mono text-[9.5px] uppercase tracking-widest font-semibold">
-                  <Heart className="w-3 h-3 fill-honey text-honey" />
-                  <span>Studio Note</span>
-                </div>
-                <p className="font-serif text-xs text-cream/95 mt-1 leading-snug">
-                  Warna kain & detail ekspresi dicocokkan langsung dari karaktermu.
-                </p>
-              </div>
             </motion.div>
           </div>
         </div>

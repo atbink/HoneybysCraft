@@ -32,10 +32,10 @@ export const Footer: React.FC = () => {
             <ul className="grid grid-cols-2 gap-2 font-sans text-xs sm:text-sm text-cream/80">
               {[
                 { label: 'Koleksi Karakter', href: '#characters' },
+                { label: 'Sketsa ke Boneka', href: '#design-to-plush' },
                 { label: 'Cara Pesan', href: '#how-it-works' },
                 { label: 'Kenapa Kami', href: '#why-us' },
                 { label: 'Custom Plush', href: '#custom-plush' },
-                { label: 'Detail Jahitan', href: '#craft-details' },
                 { label: 'Ulasan Pembeli', href: '#reviews' },
               ].map((link) => (
                 <li key={link.label}>

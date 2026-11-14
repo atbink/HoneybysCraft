@@ -5,10 +5,10 @@ import { getWhatsAppUrl, WA_TEMPLATES } from '../utils/whatsapp';
 
 const NAV_LINKS = [
   { label: 'Koleksi Karakter', href: '#characters' },
+  { label: 'Sketsa ke Boneka', href: '#design-to-plush' },
   { label: 'Cara Pesan', href: '#how-it-works' },
   { label: 'Kenapa Kami', href: '#why-us' },
   { label: 'Custom Plush', href: '#custom-plush' },
-  { label: 'Detail Jahitan', href: '#craft-details' },
   { label: 'Ulasan', href: '#reviews' },
 ];
 
@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
           {/* Desktop Navigation Links */}
           <nav
             aria-label="Navigasi Utama"
-            className="hidden lg:flex items-center gap-7 xl:gap-8"
+            className="hidden lg:flex items-center gap-6 xl:gap-8"
           >
             {NAV_LINKS.map((item) => (
               <a
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
             <a
               href="#custom-plush"
               data-cursor="CUSTOM"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono uppercase tracking-wider text-cocoa hover:text-espresso transition-colors"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono uppercase tracking-wider text-cocoa hover:text-espresso transition-colors"
             >
               Custom Ide
             </a>

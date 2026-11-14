@@ -3,6 +3,7 @@ import { CustomCursor } from './components/CustomCursor';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CharacterCollection } from './components/CharacterCollection';
+import { DesignToPlush } from './components/DesignToPlush';
 import { HowItWorks } from './components/HowItWorks';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { CustomPlushCTA } from './components/CustomPlushCTA';
@@ -28,22 +29,25 @@ export function App() {
         {/* 2. CHARACTER COLLECTION */}
         <CharacterCollection />
 
-        {/* 3. HOW IT WORKS (3 Simple Steps) */}
+        {/* 3. BEFORE & AFTER SLIDER (2D Sketch to 3D Plush Transformation) */}
+        <DesignToPlush />
+
+        {/* 4. HOW IT WORKS (3 Simple Steps) */}
         <HowItWorks />
 
-        {/* 4. WHY HONEY BY S CRAFT (Consolidated 4 Core Values) */}
+        {/* 5. WHY HONEY BY S CRAFT (4 Core Values) */}
         <WhyChooseUs />
 
-        {/* 5. CUSTOM PLUSH CTA (Punchy Conversion Section) */}
+        {/* 6. CUSTOM PLUSH CTA (Punchy Conversion Section) */}
         <CustomPlushCTA />
 
-        {/* 6. GALLERY / CRAFT DETAILS (Compact Bento Showcase) */}
+        {/* 7. GALLERY / CRAFT DETAILS (Compact Bento Showcase) */}
         <CraftDetailsGallery />
 
-        {/* 7. TESTIMONIALS (Max 3 Authentic Reviews) */}
+        {/* 8. TESTIMONIALS (Max 3 Authentic Reviews) */}
         <Testimonials />
 
-        {/* 8. FINAL CTA */}
+        {/* 9. FINAL CTA */}
         <FinalCTA />
       </main>
 
