@@ -183,7 +183,7 @@ export const CRAFT_DETAILS: CraftDetail[] = [
     id: 'detail-huggable',
     title: 'Soft Minky Warmth',
     caption: 'Kain minky premium dengan isian dakron lembut, nyaman digenggam dan dipeluk.',
-    image: '/images/hero-plush.png',
+    image: '/images/hero-plush-centered.png',
     aspect: 'aspect-[4/3]',
   },
 ];
