@@ -80,12 +80,23 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://tiktok.com/@honeybys.craft"
+                  href="https://shopee.co.id/honeybys.craft"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between hover:text-honey-light transition-colors group"
                 >
-                  <span>TikTok: @honeybys.craft</span>
+                  <span>Shopee 1: Honeybys.craft</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-cream/50 group-hover:text-honey-light transition-colors" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://shopee.co.id/honebys.craft2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between hover:text-honey-light transition-colors group"
+                >
+                  <span>Shopee 2: Honebys.craft2</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-cream/50 group-hover:text-honey-light transition-colors" />
                 </a>
               </li>
