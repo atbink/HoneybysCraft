@@ -94,9 +94,16 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Credits */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-cream/50">
-          <p>© {new Date().getFullYear()} Honey by S Craft. All rights reserved.</p>
-          <p>Handmade with love in Indonesia 🧸</p>
+        <div className="pt-6 grid grid-cols-1 md:grid-cols-3 items-center gap-3 text-xs font-mono text-cream/50">
+          <p className="text-center md:text-left">
+            @2026 Honeybys.craft. All rights reserved.
+          </p>
+          <p className="text-center text-[11px] text-cream/40 tracking-wider">
+            build by ydsn studio
+          </p>
+          <p className="text-center md:text-right">
+            Handmade with love in Indonesia 🧸
+          </p>
         </div>
       </div>
     </footer>
