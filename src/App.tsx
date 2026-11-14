@@ -2,15 +2,12 @@ import React from 'react';
 import { CustomCursor } from './components/CustomCursor';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { BrandIntro } from './components/BrandIntro';
-import { ProductCategories } from './components/ProductCategories';
+import { CharacterCollection } from './components/CharacterCollection';
 import { HowItWorks } from './components/HowItWorks';
 import { WhyChooseUs } from './components/WhyChooseUs';
-import { CreativeCategories } from './components/CreativeCategories';
-import { DesignToPlush } from './components/DesignToPlush';
-import { Portfolio } from './components/Portfolio';
-import { QuantitySection } from './components/QuantitySection';
-import { FAQ } from './components/FAQ';
+import { CustomPlushCTA } from './components/CustomPlushCTA';
+import { CraftDetailsGallery } from './components/CraftDetailsGallery';
+import { Testimonials } from './components/Testimonials';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
@@ -18,48 +15,42 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 export function App() {
   return (
     <div className="min-h-screen flex flex-col bg-cream-soft text-espresso selection:bg-honey/25 selection:text-cocoa-deep">
+      {/* Custom Tactile Cursor */}
       <CustomCursor />
+
+      {/* Navigation Bar */}
       <Navbar />
 
       <main className="flex-grow">
-        {/* Section 2: Hero */}
+        {/* 1. HERO SECTION */}
         <Hero />
 
-        {/* Section 3: Brand Introduction */}
-        <BrandIntro />
+        {/* 2. CHARACTER COLLECTION */}
+        <CharacterCollection />
 
-        {/* Section 4: Product Categories */}
-        <ProductCategories />
-
-        {/* Section 5: How It Works */}
+        {/* 3. HOW IT WORKS (3 Simple Steps) */}
         <HowItWorks />
 
-        {/* Section 6: Why Choose Us */}
+        {/* 4. WHY HONEY BY S CRAFT (Consolidated 4 Core Values) */}
         <WhyChooseUs />
 
-        {/* Section 7: What Can We Create (Interactive Moodboard) */}
-        <CreativeCategories />
+        {/* 5. CUSTOM PLUSH CTA (Punchy Conversion Section) */}
+        <CustomPlushCTA />
 
-        {/* Section 8: Before & After / Design to Plush */}
-        <DesignToPlush />
+        {/* 6. GALLERY / CRAFT DETAILS (Compact Bento Showcase) */}
+        <CraftDetailsGallery />
 
-        {/* Section 9: Portfolio Gallery */}
-        <Portfolio />
+        {/* 7. TESTIMONIALS (Max 3 Authentic Reviews) */}
+        <Testimonials />
 
-        {/* Section 10: Flexible Quantity Section */}
-        <QuantitySection />
-
-        {/* Section 11: FAQ */}
-        <FAQ />
-
-        {/* Section 12: Final CTA */}
+        {/* 8. FINAL CTA */}
         <FinalCTA />
       </main>
 
-      {/* Footer */}
+      {/* Clean Boutique Footer */}
       <Footer />
 
-      {/* Floating WhatsApp CTA */}
+      {/* Floating WhatsApp Quick Action */}
       <FloatingWhatsApp />
     </div>
   );

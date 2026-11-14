@@ -5,77 +5,66 @@ import { getWhatsAppUrl, WA_TEMPLATES, WA_DISPLAY_PHONE } from '../utils/whatsap
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-espresso text-cream border-t border-cream/10">
-      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-22">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-14 border-b border-cream/10">
-          {/* Brand Column (6 cols) */}
-          <div className="md:col-span-6 space-y-4">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 py-14 lg:py-18">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-cream/10 items-start">
+          {/* Brand Info (5 cols) */}
+          <div className="md:col-span-5 space-y-3">
             <a
               href="#beranda"
-              className="inline-block font-serif text-3xl sm:text-4xl font-bold tracking-tight text-cream"
+              className="inline-block font-serif text-2xl sm:text-3xl font-bold tracking-tight text-cream"
             >
-              HONEYBYS<span className="text-honey">.</span>CRAFT
+              HONEY BY S CRAFT<span className="text-honey">.</span>
             </a>
-
-            <p className="font-serif italic text-xl sm:text-2xl text-beige leading-snug max-w-sm">
-              Made from imagination.
-              <br />
-              Made to be loved.
+            <p className="font-hand text-xl text-beige">
+              Your Imagination, Made Huggable.
             </p>
-
-            <p className="font-sans text-sm text-cream/70 max-w-md leading-relaxed">
-              Studio boneka handmade kustom yang mengubah karakter original,
-              ilustrasi pribadi, memori berharga, dan maskot menjadi karya fisik yang
-              bisa kamu dekap dan pajang dengan bangga.
+            <p className="font-sans text-xs sm:text-sm text-cream/70 max-w-sm leading-relaxed">
+              Studio kerajinan boneka plush handmade kustom. Mengubah karakter kesayangan,
+              ilustrasi digital, dan memori menjadi karya fisik yang siap didekap.
             </p>
           </div>
 
-          {/* Navigation Column (3 cols) */}
-          <div className="md:col-span-3 space-y-3.5">
-            <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-honey-light font-semibold">
-              Navigasi
+          {/* Quick Navigation (4 cols) */}
+          <div className="md:col-span-4 space-y-3">
+            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-honey-light font-semibold">
+              Navigasi Halaman
             </h3>
-            <ul className="space-y-2 font-sans text-sm text-cream/80">
+            <ul className="grid grid-cols-2 gap-2 font-sans text-xs sm:text-sm text-cream/80">
               {[
-                { label: 'Beranda', href: '#beranda' },
-                { label: 'Kategori Produk', href: '#produk' },
-                { label: 'Cara Pesan', href: '#cara-pesan' },
-                { label: 'Galeri Karya', href: '#galeri' },
-                { label: 'FAQ', href: '#faq' },
+                { label: 'Koleksi Karakter', href: '#characters' },
+                { label: 'Cara Pesan', href: '#how-it-works' },
+                { label: 'Kenapa Kami', href: '#why-us' },
+                { label: 'Custom Plush', href: '#custom-plush' },
+                { label: 'Detail Jahitan', href: '#craft-details' },
+                { label: 'Ulasan Pembeli', href: '#reviews' },
               ].map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="hover:text-honey-light transition-colors inline-flex items-center gap-1"
+                    className="hover:text-honey-light transition-colors"
                   >
-                    <span>{link.label}</span>
+                    {link.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Social Column (3 cols) */}
-          <div className="md:col-span-3 space-y-3.5">
-            <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-honey-light font-semibold">
-              Hubungi Studio
+          {/* Contact & Socials (3 cols) */}
+          <div className="md:col-span-3 space-y-3">
+            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-honey-light font-semibold">
+              Hubungi Kami
             </h3>
-            <ul className="space-y-2.5 font-sans text-sm text-cream/80">
+            <ul className="space-y-2 font-sans text-xs sm:text-sm text-cream/80">
               <li>
                 <a
                   href={getWhatsAppUrl(WA_TEMPLATES.general())}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between py-1 border-b border-cream/10 hover:border-honey-light transition-colors"
+                  className="flex items-center justify-between hover:text-honey-light transition-colors group"
                 >
-                  <div>
-                    <span className="block font-medium text-honey-light group-hover:text-cream transition-colors">
-                      WhatsApp Resmi
-                    </span>
-                    <span className="font-mono text-[10.5px] text-cream/70">
-                      {WA_DISPLAY_PHONE}
-                    </span>
-                  </div>
-                  <ArrowUpRight className="w-4 h-4 text-cream/50 group-hover:text-honey-light group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  <span>WhatsApp: {WA_DISPLAY_PHONE}</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-cream/50 group-hover:text-honey-light transition-colors" />
                 </a>
               </li>
               <li>
@@ -83,17 +72,10 @@ export const Footer: React.FC = () => {
                   href="https://instagram.com/honeybys.craft"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between py-1 border-b border-cream/10 hover:border-honey-light transition-colors"
+                  className="flex items-center justify-between hover:text-honey-light transition-colors group"
                 >
-                  <div>
-                    <span className="block font-medium text-cream group-hover:text-honey-light transition-colors">
-                      Instagram
-                    </span>
-                    <span className="font-mono text-[10.5px] text-cream/55">
-                      @honeybys.craft
-                    </span>
-                  </div>
-                  <ArrowUpRight className="w-4 h-4 text-cream/50 group-hover:text-honey-light group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  <span>Instagram: @honeybys.craft</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-cream/50 group-hover:text-honey-light transition-colors" />
                 </a>
               </li>
               <li>
@@ -101,27 +83,20 @@ export const Footer: React.FC = () => {
                   href="https://tiktok.com/@honeybys.craft"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between py-1 border-b border-cream/10 hover:border-honey-light transition-colors"
+                  className="flex items-center justify-between hover:text-honey-light transition-colors group"
                 >
-                  <div>
-                    <span className="block font-medium text-cream group-hover:text-honey-light transition-colors">
-                      TikTok
-                    </span>
-                    <span className="font-mono text-[10.5px] text-cream/55">
-                      @honeybys.craft
-                    </span>
-                  </div>
-                  <ArrowUpRight className="w-4 h-4 text-cream/50 group-hover:text-honey-light group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  <span>TikTok: @honeybys.craft</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-cream/50 group-hover:text-honey-light transition-colors" />
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs text-cream/60">
-          <p>© 2026 Honeybys.craft · Studio Boneka Kustom Handmade</p>
-          <p className="text-beige">Dibuat dengan cinta & kehangatan 🤎</p>
+        {/* Bottom Credits */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-cream/50">
+          <p>© {new Date().getFullYear()} Honey by S Craft. All rights reserved.</p>
+          <p>Handmade with love in Indonesia 🧸</p>
         </div>
       </div>
     </footer>
